@@ -1,0 +1,16 @@
+ALGORITHM insertion_sort
+VAR
+    A:=[9,8,2,45,78,12];
+    key,i,j:INTEGER;
+BEGIN
+    FOR i FROM 1 TO length(A) - 1 DO
+        key = A[i]  
+        j = i - 1  
+        WHILE (j >= 0 and A[j] > key) DO
+            A[j + 1] = A[j]
+            j = j - 1
+        END_WHILE 
+        A[j + 1] = key
+    END_FOR 
+    write(A)   
+END
